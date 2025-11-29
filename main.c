@@ -57,3 +57,14 @@ void summary(struct Employee *emp, int n) {
     printf("Average Net Salary   : %.2f\n", total_net / n);
     printf("****************************************\n");
 }
+int main() {
+    int n;
+    printf("Enter number of employees: ");
+    scanf("%d", &n);
+
+    struct Employee *emp = (struct Employee *)malloc(n * sizeof(struct Employee));
+
+    for (int i = 0; i < n; i++) {
+        printf("\nEnter details of employee %d:\n", i + 1);
+        input(&emp[i]);
+    }
