@@ -68,3 +68,14 @@ int main() {
         printf("\nEnter details of employee %d:\n", i + 1);
         input(&emp[i]);
     }
+
+ printf("\n********** ALL SALARY SLIPS **********\n");
+    for (int i = 0; i < n; i++) {
+        display(&emp[i]);
+    }
+
+    summary(emp, n);
+
+    free(emp);
+    return 0;
+}
